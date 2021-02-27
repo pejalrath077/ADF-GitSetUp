@@ -1,8 +1,0 @@
-{
-	"name": "CosmosDbMongoDbApiCollection1",
-	"properties": {
-		"annotations": [],
-		"type": "CosmosDbMongoDbApiCollection",
-		"schema": []
-	}
-}
