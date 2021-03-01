@@ -1,0 +1,36 @@
+{
+	"name": "Json2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage4",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "product.json",
+				"folderPath": "input",
+				"container": "bankingpejal"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pId": {
+					"type": "integer"
+				},
+				"pName": {
+					"type": "string"
+				},
+				"pQty": {
+					"type": "integer"
+				},
+				"pPrice": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}
