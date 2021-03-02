@@ -185,7 +185,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "iotcontainer/processed_data/rdbms.json"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.temperature"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
