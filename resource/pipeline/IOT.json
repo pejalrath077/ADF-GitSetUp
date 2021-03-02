@@ -56,8 +56,6 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "processed_data",
-							"wildcardFileName": "rdbms.json",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -69,11 +67,66 @@
 						"writeBatchTimeout": "00:30:00",
 						"writeBehavior": "insert"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['messageId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['deviceId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['temperature']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['humidity']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EventProcessedUtcTime']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PartitionId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EventEnqueuedUtcTime']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['IoTHub']['ConnectionDeviceId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['IoTHub']['ConnectionDeviceGenerationId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['IoTHub']['EnqueuedTime']"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "MongoDBfile",
+						"referenceName": "mongodbfile1",
 						"type": "DatasetReference"
 					}
 				],
