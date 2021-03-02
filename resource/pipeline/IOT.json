@@ -76,7 +76,7 @@
 									"path": "$['messageId']"
 								},
 								"sink": {
-									"path": "messageId"
+									"path": "_id"
 								}
 							},
 							{
