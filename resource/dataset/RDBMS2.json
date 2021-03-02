@@ -1,0 +1,19 @@
+{
+	"name": "RDBMS2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "iotcontainer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "processed_data",
+				"container": "iotcontainer"
+			}
+		},
+		"schema": {}
+	}
+}
