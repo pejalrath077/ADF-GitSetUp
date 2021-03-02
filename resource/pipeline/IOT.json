@@ -132,7 +132,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CosmosDbMongoDbApiCollection2",
+						"referenceName": "CosmosDbMongoDbApiCollection3",
 						"type": "DatasetReference"
 					}
 				]
