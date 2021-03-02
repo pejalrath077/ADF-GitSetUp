@@ -1,0 +1,61 @@
+{
+	"name": "SQL_DB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "pejaldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "messageId",
+				"type": "varchar"
+			},
+			{
+				"name": "deviceId",
+				"type": "varchar"
+			},
+			{
+				"name": "temperature",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "humidity",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "EventProcessedUtcTime",
+				"type": "varchar"
+			},
+			{
+				"name": "PartitionId",
+				"type": "varchar"
+			},
+			{
+				"name": "EventEnqueuedUtcTime",
+				"type": "varchar"
+			},
+			{
+				"name": "ConnectionDeviceId",
+				"type": "varchar"
+			},
+			{
+				"name": "ConnectionDeviceGenerationId",
+				"type": "varchar"
+			},
+			{
+				"name": "EnqueuedTime",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "temperature"
+		}
+	}
+}

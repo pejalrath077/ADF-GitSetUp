@@ -198,11 +198,115 @@
 							"type": "JsonReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "SqlServerSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['messageId']"
+								},
+								"sink": {
+									"name": "messageId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['deviceId']"
+								},
+								"sink": {
+									"name": "deviceId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['temperature']"
+								},
+								"sink": {
+									"name": "temperature",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['humidity']"
+								},
+								"sink": {
+									"name": "humidity",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EventProcessedUtcTime']"
+								},
+								"sink": {
+									"name": "EventProcessedUtcTime",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PartitionId']"
+								},
+								"sink": {
+									"name": "PartitionId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EventEnqueuedUtcTime']"
+								},
+								"sink": {
+									"name": "EventEnqueuedUtcTime",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['IoTHub']['ConnectionDeviceId']"
+								},
+								"sink": {
+									"name": "ConnectionDeviceId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['IoTHub']['ConnectionDeviceGenerationId']"
+								},
+								"sink": {
+									"name": "ConnectionDeviceGenerationId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['IoTHub']['EnqueuedTime']"
+								},
+								"sink": {
+									"name": "EnqueuedTime",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "temperaturefile",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SQL_DB",
 						"type": "DatasetReference"
 					}
 				]
