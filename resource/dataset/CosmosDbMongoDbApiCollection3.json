@@ -7,9 +7,6 @@
 		},
 		"annotations": [],
 		"type": "CosmosDbMongoDbApiCollection",
-		"schema": [],
-		"typeProperties": {
-			"collection": "Temperature"
-		}
+		"schema": []
 	}
 }

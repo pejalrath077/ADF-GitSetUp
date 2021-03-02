@@ -74,51 +74,81 @@
 							{
 								"source": {
 									"path": "$['messageId']"
+								},
+								"sink": {
+									"path": "messageId"
 								}
 							},
 							{
 								"source": {
 									"path": "$['deviceId']"
+								},
+								"sink": {
+									"path": "deviceId"
 								}
 							},
 							{
 								"source": {
 									"path": "$['temperature']"
+								},
+								"sink": {
+									"path": "temperature"
 								}
 							},
 							{
 								"source": {
 									"path": "$['humidity']"
+								},
+								"sink": {
+									"path": "humidity"
 								}
 							},
 							{
 								"source": {
 									"path": "$['EventProcessedUtcTime']"
+								},
+								"sink": {
+									"path": "EventProcessedUtcTime"
 								}
 							},
 							{
 								"source": {
 									"path": "$['PartitionId']"
+								},
+								"sink": {
+									"path": "PartitionId"
 								}
 							},
 							{
 								"source": {
 									"path": "$['EventEnqueuedUtcTime']"
+								},
+								"sink": {
+									"path": "EventEnqueuedUtcTime"
 								}
 							},
 							{
 								"source": {
 									"path": "$['IoTHub']['ConnectionDeviceId']"
+								},
+								"sink": {
+									"path": "ConnectionDevicedId"
 								}
 							},
 							{
 								"source": {
 									"path": "$['IoTHub']['ConnectionDeviceGenerationId']"
+								},
+								"sink": {
+									"path": "ConnectionDeviceGenerationId"
 								}
 							},
 							{
 								"source": {
 									"path": "$['IoTHub']['EnqueuedTime']"
+								},
+								"sink": {
+									"path": "EnqueuedTime"
 								}
 							}
 						]
