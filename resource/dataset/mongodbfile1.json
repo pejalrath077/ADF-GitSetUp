@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "mongodb.jason",
+				"fileName": "mongodb.json",
 				"folderPath": "processed_data",
 				"container": "iotcontainer"
 			}
